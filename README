@@ -1,0 +1,7 @@
+Reference:
+    http://code.google.com/p/gamekit/
+
+bullet physics engine for android
+
+./build.sh:
+    downloads and builds bullet for android
