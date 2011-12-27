@@ -80,7 +80,7 @@ if(${NDK_STL} STREQUAL "gnu-libstdc++")
 MESSAGE("Use exceptions, rtti")
 SET (NDK_BUILD_FLAGS "-fexceptions -frtti" CACHE TYPE STRING)
 link_libraries(
-	$ENV{NDK}/sources/cxx-stl/${NDK_STL}/libs/${NDK_TARGET}/libstdc++.so
+	$ENV{NDK}/sources/cxx-stl/${NDK_STL}/libs/${NDK_TARGET}/libsupc++.a
 )
 endif(${NDK_STL} STREQUAL "gnu-libstdc++")
 
@@ -88,7 +88,7 @@ if(${NDK_STL} STREQUAL "stlport")
 MESSAGE("Use no exceptions, rtti")
 SET (NDK_BUILD_FLAGS "-fno-exceptions -fno-rtti" CACHE TYPE STRING)
 link_libraries(
-	$ENV{NDK}/sources/cxx-stl/${NDK_STL}/libs/${NDK_TARGET}/libstdc++.so
+	$ENV{NDK}/sources/cxx-stl/${NDK_STL}/libs/${NDK_TARGET}/libsupc++.a
 )
 endif(${NDK_STL} STREQUAL "stlport")
 
